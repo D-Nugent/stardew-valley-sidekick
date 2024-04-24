@@ -1,0 +1,106 @@
+.sidekickTimerDisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 35vh;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        width: 50%;
+        height: 100%;
+    }
+
+    &__wakeUpBtn {
+        width: 100%;
+    }
+
+    &__goToBedBtn {
+        width: 100%;
+    }
+}
+
+.energyBar {
+    height: 200px;
+    width: 33.45px;
+    position: relative;;
+
+    &__display {
+        height: 100%;
+    }
+
+    &__level {
+        position: absolute;
+        left: 8px;
+        bottom: 5px;
+        width: 17px;
+
+        &--low {
+            height: 30px;
+            background-color: #FE5E00;
+        }
+
+        &--high {
+            height: 130px;
+            background-color: #3DFF00;
+        }
+    }
+}
+
+.sidekickClock {
+    height: 100px;
+    position: relative;
+
+    &__display {
+        height: 100%;
+        // height: 308px;
+        // width: 565px;
+    }
+
+    &__displayHand {
+        position: absolute;
+        left: 44px;
+        bottom: 0;
+        height: 50%;
+        // Set the origin of the transform to the bottom (base) of the hand
+        transform-origin: top;
+    }
+
+    &__time {
+        position: absolute;
+        right: 26px;
+        bottom: -27px;
+        color: #1A0B1F;
+        font-family: 'StardewValleyWritten', sans-serif;
+        font-size: 1.6rem;
+
+        &--err {
+            color: #E41A03;
+
+        }
+    }
+    &__date {
+        position: absolute;
+        left: 86px;
+        top: -22px;
+        color: #1A0B1F;
+        font-family: 'StardewValleyWritten', sans-serif;
+        font-size: 1.6rem;
+    }
+}
+
+@keyframes rotateHand {
+    0% {
+      // Start with the hand pointing downwards (6 o'clock)
+      transform: rotate(0deg);
+    }
+    100% {
+      // Rotate the hand to point upwards (12 o'clock)
+      transform: rotate(180deg);
+    }
+  }

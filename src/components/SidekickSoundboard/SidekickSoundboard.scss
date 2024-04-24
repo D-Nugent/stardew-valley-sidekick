@@ -1,0 +1,32 @@
+.sidekickSoundboard {
+
+    &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 6vh;
+    }
+
+    &__icon{
+        height: 40px;
+        margin-left: 12px;
+    }
+
+    &__title {
+        font-family: 'StardewValleyWritten', sans-serif;
+        color: #FFF;
+        margin: 0;
+        margin-right: 8px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+
+        &-item {
+            width: 100%;
+        }
+    }
+}

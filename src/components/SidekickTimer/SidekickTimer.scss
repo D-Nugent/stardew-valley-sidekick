@@ -1,0 +1,58 @@
+.timerHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    // height: 60px;
+    width: 100%;
+    margin-top: 35vh;
+
+    &__icon{
+        height: 60px;
+    }
+
+    &__titleWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;    
+    }
+
+    &__title{
+        font-family: 'StardewValleyWritten', sans-serif;
+        color: #FFF;
+        margin: 0;
+        margin-left: -4px;
+        margin-right: 8px;
+        // margin-left: -8px;
+    }
+
+    &__infoBtn {
+        background-color: transparent;
+        height: 100%;
+        padding: 0;
+
+        &__icon {
+            height: 32px;
+        }
+    }
+}
+
+.infoPage {
+    position:absolute;
+    width: 90%;
+
+    &__content {
+        width: 100%;
+    }
+}
+
+.difficultyBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    & > img {
+        width: 45%;
+    }
+}

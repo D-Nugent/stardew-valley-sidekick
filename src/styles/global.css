@@ -1,0 +1,7 @@
+/* src/styles/global.css */
+@font-face {
+    font-family: 'StardewValleyWritten';
+    src: url('../assets/fonts/Stardew_Valley_written.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
