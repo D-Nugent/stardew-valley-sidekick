@@ -9,7 +9,7 @@ import OwlSFX from "../../../assets/audio/owl.wav";
 import useSound from "use-sound";
 
 const SidekickTimerDisplay = ({ difficulty }: { difficulty: string }) => {
-  const [playRooster] = useSound(RoosterSFX, { volume: 0.5 });
+  const [playRooster] = useSound(RoosterSFX, { volume: 0.3 });
   const [playOwl] = useSound(OwlSFX, { volume: 0.5 });
 
   const [energyLow, setEnergyLow] = useState(false);
@@ -26,7 +26,7 @@ const SidekickTimerDisplay = ({ difficulty }: { difficulty: string }) => {
 
     const secondsPerGameHour = difficulty === "easy" ? 2 : 1;
 
-    if (currentTime === startMinutes) {
+    if (timerStarted && currentTime === startMinutes) {
       playRooster();
     } else if (currentTime === endMinutes - 2 * 60) {
       playOwl();
